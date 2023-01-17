@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="Images/asl_logo.ico" />
+    <title>Team challenger's</title>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:100,300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animate.css">
+    <script src="dist/build.js"></script>
+</head>
+
+<body>
+    <div id="welcomeContainer" class="animated">
+        <div id="welcomeScreen">
+            <h1 style="color: rgb(0, 0, 0);">&#129302;Talkative Bot for speech Impaired&#128266;</h1>
+            
+            <h3 class="animated wobble" style="color: rgb(236, 28, 39);" ><b><li>YASH UPADHYAY</li></b></h3>
+           <h3 style="color: rgb(236, 28, 39);" class="animated wobble " ><b><li>PRASANNA KUMAR B G</li></b></h3>
+            <h3 style="color: rgb(236, 28, 39);" class="animated wobble " ><b><li>SRI RAMAKRISHNA PRABHU ADIVI</li></b></h3>
+            <h3 style="color: rgb(236, 28, 39);" class="animated wobble " ><b><li>NUNNA VISHNU TEJA</li></b></h3>
+            <h3 style="color: rgb(236, 28, 39);" class="animated wobble " ><b><li>PENTA ARAVINDA SWAMY</li></b></h3>
+
+        </div>
+        <button id="proceedButton">Let the Show Begin</button>
+    </div>
+    <div id="titleBar">
+        <h1 id="stage" style="color: rgb(231, 164, 20);"">Training the symbols</h1>
+        <h3 id="steps">Train about 30 samples of your Start Gesture and 30 for your idle, Stop Ge   sture.</h3>
+        <button id="nextButton" class="animated flash delay-3s">Next</button>
+        <button id="predictButton" class="animated flash slideInRight faster">Translate</button>
+        <button id="backButton" class="animated slideInLeft faster">Back to Training</button>
+        <button id="videoCallBtn" class="videoCallBtn animated slideInRight faster"><a href="#"><b>HOME</b></a></button>
+    </div>
+    <div id="status">
+        <p id="status-text">Status: Not Ready</p>
+    </div>
+    <div id="translatorWindow">
+        <div id="initialTrainingHolder">
+            <img src="" alt="checkmark" id="checkmark_startButton" class="checkMark">
+            <button id="startButton" class="trainButton ">Start Gesture</button>
+            <button id="clear_startButton" class="clearButton">Clear</button>
+            <h3 id="counter_startButton" class="counter"></h3>
+
+            <button id="stopButton" class="trainButton ">Stop Gesture</button>
+            <button id="clear_stopButton" class="clearButton">Clear</button>
+            <h3 id="counter_stopButton" class="counter"></h3>
+            <img src="" alt="checkmark" id="checkmark_stopButton" class="checkMark">
+        </div>
+        <div id="videoHolder" class="videoContainerTrain">
+            <video id="video" class="videoTrain" src='' muted autoplay playsinline></video>
+            <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=f37957b6-0f91-4fc5-90ce-f818cc85b5bf&room=DEFAULT_ROOM&iframe=true"
+                width=650 height=370 allow="microphone; camera" id="videoCall"></iframe>
+        </div>
+        <div id="trainingHolder">
+            <h5 id="add-gesture">Add Gesture</h5>
+            <img src="Images/plus_sign.svg" alt="Plus Sign" id="plus_sign" class="plus_sign animated">
+            <form id="add-word" autocomplete="off">
+                <input type="text" id="new-word" placeholder="New Gesture Title">
+                <input type="submit" id="submit-word" value="Add Word &#9658;">
+            </form>
+            <button id="doneRetrain" class="doneRetrain">Done Retraining</button>
+
+            <div id="trainingCommands"></div>
+        </div>
+        <div id="translationHolder">
+            <div id="translatedCard">
+            </div>
+            <h3 id="translationText">Start Signing!</h3>
+        </div>
+    </div>
+    <div id="trainedCardsHolder">
+    </div>
+</body>
+<!--done by mani teja -->
+</html>
